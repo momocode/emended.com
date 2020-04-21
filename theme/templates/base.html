@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <link rel="canonical" href="{{ ABSOLUTE_SITEURL }}/{{ page.url }}">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+{% include 'google_analytics.html' %}
+{% import 'translations.html' as translations with context %}
+{% if translations.entry_hreflang(page) %}
+{{ translations.entry_hreflang(page) }}
+    {% endif %}
+    {% import 'feeds.html' as feeds with context %}
+    {{ feeds.feeds_head() }}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+    {% endblock head %}
+</head>
+
+<body>
+    <div id="site">
+        <div id="banner-top" class="emended-blue">
+            <div id="topbar">
+                <header id="logo">
+                    <a href="{{ SITEURL }}/">{{ SITENAME }} {{ SITESUBTITLE }}</a>
+                </header>
+                <nav>
+                    <ul id="top-menu" class="menu">
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for p in pages %}
+                        {% if p.menu is undefined %}
+                            <li class="{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {%- for title, link in MENUITEMS %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    {% if page.translations %}
+                    {% for translation in page.translations %}
+                        <li> <a href="{{ SITEURL }}/{{ translation.url }}" hreflang="{{ translation.lang }}">{{ translation.lang | lang_name }}</a>
+                    {% endfor %}
+                    {% else %}
+                    {% for lang, url in extra_siteurls.items() %}
+                        <li> <a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang) }}/" hreflang="{{ lang }}">{{ lang | lang_name }}</a>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
+                </nav>
+            </div> <!-- /#topbar -->
+        </div> <!-- /#banner-top -->
+        <main id="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer id="banner-bottom" class="emended-blue">
+            <div id="bottom-menu">
+            <ul class="menu">
+                {% for p in pages %}
+                    {% if p.menu == 'bottom' %}
+                    <li class="{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="menu">
+            {% for name, link in LINKS %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+            </ul>
+            <ul class="menu">
+            {% for name, link in SOCIAL %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+            </ul>
+            </div><!--/#bottom-menu-->
+        </footer>
+    </div>
+</body>
+</html>

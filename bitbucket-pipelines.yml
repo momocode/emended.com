@@ -1,0 +1,23 @@
+image: python:3.8-alpine
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy to https://draft.emended.com
+          script:
+            - apk add jq
+            - pip install awscli
+            - pip install -r requirements.txt
+            - bin/make-dist.sh https://draft.emended.com
+            - sh -x bin/publish-cf.sh draft.emended.com output
+  tags:
+    release-*:
+      - step:
+          name: Deploy to https://emended.com
+          script:
+            - apk add jq
+            - pip install awscli
+            - pip install -r requirements.txt
+            - GOOGLE_ANALYTICS="$PRODUCTION_GA_ID" bin/make-dist.sh https://emended.com
+            - sh -x bin/publish-cf.sh emended.com output

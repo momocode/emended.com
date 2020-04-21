@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emended.com/sitemap.xml
