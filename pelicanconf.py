@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+
 AUTHOR = 'Momocode oy'
 SITENAME = 'Emended'
 SITEURL = ''
-ABSOLUTE_SITEURL = ''
+ABSOLUTE_SITEURL = os.environ.get('SITEURL', '')
 
 PLUGIN_PATHS = (
     'pelican-plugins',
@@ -41,13 +43,16 @@ I18N_SUBSITES = {
             ('Rekisteröidy', 'https://app.emended.com/signup'),
         ),
         'SITEMAP': {
+            'siteurl': ABSOLUTE_SITEURL,
             'format': 'xml',
             'output_filename': 'sitemap_fi.xml'
-        }
+        },
+        'ABSOLUTE_SITEURL': ABSOLUTE_SITEURL + '/fi'
     },
 }
 
 SITEMAP = {
+    'siteurl': ABSOLUTE_SITEURL,
     'format': 'xml',
     'output_filename': 'sitemap_en.xml'
 }

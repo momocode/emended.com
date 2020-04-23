@@ -88,6 +88,8 @@ class SitemapGenerator(object):
         if not isinstance(config, dict):
             warning("sitemap plugin: the SITEMAP setting must be a dict")
         else:
+            if 'siteurl' in config:
+                self.siteurl = config['siteurl']
             output_filename = config.get('output_filename', None)
             fmt = config.get('format')
             pris = config.get('priorities')

@@ -8,18 +8,13 @@ from __future__ import unicode_literals
 import os
 import sys
 sys.path.append(os.curdir)
-from pelicanconf import *
 
 if 'SITEURL' not in os.environ:
     raise Exception('SITEURL variable must be set')
 
-ABSOLUTE_SITEURL = os.environ['SITEURL']
-I18N_SUBSITES['fi']['ABSOLUTE_SITEURL'] = ABSOLUTE_SITEURL + '/fi'
+from pelicanconf import *
 
 if 'GOOGLE_ANALYTICS' in os.environ:
     GOOGLE_ANALYTICS = os.environ['GOOGLE_ANALYTICS']
 
-
 DELETE_OUTPUT_DIRECTORY = True
-
-#GOOGLE_ANALYTICS = ""
