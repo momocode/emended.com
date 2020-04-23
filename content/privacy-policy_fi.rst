@@ -45,9 +45,9 @@ Kerättäviä henkilötietoja käytetään:
 - osallistuttavilla kursseilla opiskelijan tarpeellisten tietojen näyttämiseen
   opettajalle
 - opettajan tarpeellisten tietojen näyttämiseen tämän opettajan kurssien
-  osallistujille.
+  osallistujille
 - osallistuttavissa tiimeissä opettajan tarpeellisten tietojen näyttämiseen
-  tiimin ylläpitäjälle
+  tiimin ylläpitäjälle.
 
 Palvelua käytettäessä lokiin kertyviä henkilötietoja käytetään:
 

@@ -42,7 +42,7 @@ The data collected is used for:
 - displaying the relevant information of the student to the teacher of courses
   the student joins
 - displaying the relevant information of the teacher of a course to the
-  students joining the course.
+  students joining the course
 - displaying the relevant information of the teacher to the team manager of
   team the teacher joins.
 
