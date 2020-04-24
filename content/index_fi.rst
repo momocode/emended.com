@@ -7,7 +7,7 @@ Emended
 :save_as: index.html
 :hide_title: true
 :title: Koti
-:description: Emendedin avulla annat opiskelijoille parempaa palautetta helpommin
+:description: Emendedin avulla annat opiskelijoille parempaa palautetta
 
 
 .. class:: tagline
