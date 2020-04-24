@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /old/
 Allow: /
 Sitemap: https://emended.com/sitemap.xml
