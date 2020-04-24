@@ -7,6 +7,7 @@ Emended
 :save_as: index.html
 :hide_title: true
 :title: Home
+:description: Emended is the free tool for giving better feedback to students
 
 
 .. class:: tagline

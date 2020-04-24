@@ -4,6 +4,7 @@ Terms of Service
 :slug: terms-of-service
 :menu: bottom
 :lang: en
+:description: Emended Terms of Service
 
 
 Emended.com provides its service to the user subject to the following

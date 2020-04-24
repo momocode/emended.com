@@ -3,6 +3,9 @@
 {% block title %}{{ SITENAME }} - {{ page.title }}{%endblock%}
 {% block head %}
   {{ super() }}
+  {% if page.description %}
+    <meta name="description" content="{{page.description}}" />
+  {% endif %}
 {% endblock %}
 
 {% block content %}

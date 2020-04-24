@@ -7,6 +7,7 @@ Tietosuojaseloste
 :date: 2020-04-20
 :menu: bottom
 :lang: fi
+:description: Emendedin tietosuojaseloste
 
 
 Rekisterinpitäjä on Momocode oy (Y-tunnus 2578144-8).

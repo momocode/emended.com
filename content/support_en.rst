@@ -3,6 +3,7 @@ Support
 
 :slug: support
 :lang: en
+:description: Emended support
 
 
 As a student you should receive instructions on how to use Emended from the

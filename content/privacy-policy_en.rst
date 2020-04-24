@@ -5,6 +5,7 @@ Privacy Policy
 :date: 2020-04-20
 :menu: bottom
 :lang: en
+:description: Privacy Policy for Emended
 
 
 The data controller is Momocode Ltd (Finnish business id 2578144-8).

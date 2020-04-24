@@ -5,6 +5,7 @@ Tuki
 :lang: fi
 :url: tuki/
 :save_as: tuki/index.html
+:description: Emendedin käyttötuki
 
 
 Opiskelijana saat ohjeet Emendedin käyttöön opettajaltasi.
