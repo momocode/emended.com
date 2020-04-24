@@ -14,10 +14,6 @@ def lambda_handler(event, context):
 
     request = event["Records"][0]["cf"]["request"]
 
-    # Redirect www.emended.com to emended.com
-    if request["headers"]["host"] == "www.emended.com":
-        return redirect_to("https://emended.com" + request["uri"])
-
     # Compatibility redirectors for old uris
     if request["uri"] in OLD_URIS:
         return redirect_to(OLD_URIS[request["uri"]])
