@@ -3,12 +3,23 @@ import re
 
 FILE_MATCHER = re.compile(".*/[^/]+\\.[^/]+$")
 
+OLD_ARTICLES = [
+'top-10-most-useful-websites-for-everything-english-language',
+'top-5-english-grammar-sites-making-your-feedback-more-actionable',
+'top-5-english-language-game-sites-making-your-feedback-more-actionable',
+'top-5-english-writing-sites-making-your-feedback-more-actionable',
+]
+
 OLD_URIS = {
     "/user-guide-for-instructors.pdf": "/guides/user-guide-for-instructors.pdf",
     "/user-guide-for-students.pdf": "/guides/user-guide-for-students.pdf",
     "/user-guide-for-team-admins.pdf": "/guides/user-guide-for-team-admins.pdf",
 }
 
+for slug in OLD_ARTICLES:
+    old_new_uri = '/old/{0}/'.format(slug)
+    OLD_URIS['/{0}'.format(slug)]  = old_new_uri
+    OLD_URIS['/{0}/'.format(slug)] = old_new_uri
 
 def lambda_handler(event, context):
 
