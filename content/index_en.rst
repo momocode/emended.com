@@ -6,7 +6,8 @@ Emended
 :url:
 :save_as: index.html
 :hide_title: true
-:title: Home
+:title: Emended
+:menu_title: Home
 :description: Emended is the free tool for giving better feedback to students
 
 

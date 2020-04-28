@@ -6,7 +6,8 @@ Emended
 :url:
 :save_as: index.html
 :hide_title: true
-:title: Koti
+:title: Emended
+:menu_title: Koti
 :description: Emendedin avulla annat opiskelijoille parempaa palautetta
 
 

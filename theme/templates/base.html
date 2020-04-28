@@ -29,7 +29,7 @@
                     {% if DISPLAY_PAGES_ON_MENU %}
                         {% for p in pages %}
                         {% if p.menu is undefined %}
-                            <li class="{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                            <li class="{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.menu_title or p.title }}</a></li>
                         {% endif %}
                         {% endfor %}
                     {% endif %}
