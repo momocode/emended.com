@@ -14,6 +14,8 @@
     {% import 'feeds.html' as feeds with context %}
     {{ feeds.feeds_head() }}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+    <meta property="og:url" content="{{ ABSOLUTE_SITEURL }}/{{ page.url }}" />
+    <meta property="og:image" content="{{ ABSOLUTE_SITEURL  }}/{{ THEME_STATIC_DIR }}/images/emended.png" />
     {% endblock head %}
 </head>
 

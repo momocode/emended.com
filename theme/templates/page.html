@@ -2,10 +2,13 @@
 {% block html_lang %}{{ page.lang }}{% endblock %}
 {% block title %}{% if SITENAME != page.title %} {{ SITENAME }} - {{ page.title }}{% else %}{{ page.title }}{% endif %}{%endblock%}
 {% block head %}
-  {{ super() }}
-  {% if page.description %}
+    {{ super() }}
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="og:type" content="website" />
+    {% if page.description %}
+    <meta property="og:description" content="{{page.description}}" />
     <meta name="description" content="{{page.description}}" />
-  {% endif %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
