@@ -43,7 +43,7 @@ I18N_SUBSITES = {
             ('Rekisteröidy', 'https://app.emended.com/signup'),
         ),
         'SITEMAP': {
-            'siteurl': ABSOLUTE_SITEURL,
+            'siteurl': ABSOLUTE_SITEURL + '/fi',
             'format': 'xml',
             'output_filename': 'sitemap_fi.xml'
         },
